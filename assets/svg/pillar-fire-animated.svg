@@ -1,0 +1,157 @@
+<svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="fd-orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F97316"/>
+      <stop offset="1" stop-color="#FB923C"/>
+    </linearGradient>
+    <linearGradient id="fd-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#111E35" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#0C1525" stop-opacity="0.55"/>
+    </linearGradient>
+    <radialGradient id="fd-pulse">
+      <stop offset="0" stop-color="#F97316" stop-opacity="0.65"/>
+      <stop offset="0.5" stop-color="#F97316" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#F97316" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fd-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes heatRise {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-10px); opacity: 0; }
+    }
+    @keyframes pulseAlert {
+      0% { transform: scale(0.9); opacity: 0.2; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+      100% { transform: scale(0.9); opacity: 0.2; }
+    }
+    @keyframes ledBlink {
+      0%, 49% { fill: #F97316; }
+      50%, 100% { fill: #0C1525; }
+    }
+    @keyframes dataFlow {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .data-line {
+      stroke-dasharray: 8 8;
+      animation: dataFlow 2s linear infinite;
+    }
+    
+    #fd-heatwaves path {
+      transform-origin: center;
+      animation: heatRise 2s infinite ease-out;
+    }
+    #fd-heatwaves path:nth-child(2) {
+      animation-delay: 1s;
+    }
+    
+    #fd-fire-pulse circle {
+      transform-origin: 80px 167px;
+      animation: pulseAlert 1.5s infinite;
+    }
+
+    #fd-panel-leds circle:nth-child(2) {
+      transform-origin: 252px 214px;
+      animation: pulseAlert 1.5s infinite;
+    }
+    #fd-panel-leds circle:nth-child(3) {
+      animation: ledBlink 0.8s infinite;
+    }
+  </style>
+
+  <!-- Ceiling conduit line -->
+  <g id="fd-ceiling" stroke="#0EA5E9" stroke-width="1.5" stroke-linecap="round">
+    <path d="M40 56 H360" opacity="0.5"/>
+    <path d="M60 50 v6 M130 50 v6 M250 50 v6 M330 50 v6" opacity="0.3"/>
+  </g>
+
+  <!-- Loop wiring -->
+  <g id="fd-loop" stroke="#0EA5E9" stroke-width="1.5" stroke-linecap="round">
+    <path d="M80 148 V120 Q80 112 88 112 H150" opacity="0.4"/>
+    <path d="M194 112 H226 Q234 112 234 120 V170" opacity="0.4"/>
+    <path d="M80 196 V208 Q80 216 88 216 H218" opacity="0.4"/>
+    <path d="M340 56 V208 Q340 216 332 216 H322" opacity="0.4"/>
+    
+    <path class="data-line" d="M80 148 V120 Q80 112 88 112 H150"/>
+    <path class="data-line" d="M194 112 H226 Q234 112 234 120 V170"/>
+    <path class="data-line" d="M80 196 V208 Q80 216 88 216 H218"/>
+    <path class="data-line" d="M340 56 V208 Q340 216 332 216 H322"/>
+    <circle cx="150" cy="112" r="2" fill="#38BDF8"/>
+    <circle cx="234" cy="170" r="2" fill="#38BDF8"/>
+    <circle cx="218" cy="216" r="2" fill="#38BDF8"/>
+    <circle cx="322" cy="216" r="2" fill="#38BDF8"/>
+    <circle cx="340" cy="56"  r="2" fill="#38BDF8"/>
+  </g>
+
+  <!-- Manual call point -->
+  <g id="fd-callpoint">
+    <rect x="56" y="148" width="48" height="48" rx="7" fill="url(#fd-glass)" stroke="#0EA5E9" stroke-width="1.5"/>
+    <circle cx="80" cy="167" r="10" stroke="#F97316" stroke-width="1.5"/>
+    <circle cx="80" cy="167" r="4" stroke="#E8F4FD" stroke-width="1.5" opacity="0.7"/>
+    <path d="M70 185 H90" stroke="#0EA5E9" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- Sounder / detector -->
+  <g id="fd-sounder">
+    <rect x="150" y="96" width="44" height="32" rx="8" fill="url(#fd-glass)" stroke="#0EA5E9" stroke-width="1.5"/>
+    <circle cx="172" cy="112" r="8" stroke="#E8F4FD" stroke-width="1.5" opacity="0.85"/>
+    <circle cx="172" cy="112" r="2.5" fill="#F97316"/>
+    <path d="M177 86 A26 26 0 0 1 196 101" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+    <path d="M178 79 A34 34 0 0 1 203 98" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+  </g>
+
+  <!-- Sprinkler head -->
+  <g id="fd-sprinkler">
+    <path d="M296 56 V84" stroke="#0EA5E9" stroke-width="1.5" stroke-linecap="round"/>
+    <rect x="289" y="84" width="14" height="10" rx="2" stroke="#0EA5E9" stroke-width="1.5" fill="url(#fd-glass)"/>
+    <path d="M289 94 C284 108 289 118 296 122" stroke="#0EA5E9" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M303 94 C308 108 303 118 296 122" stroke="#0EA5E9" stroke-width="1.5" stroke-linecap="round"/>
+    <ellipse cx="296" cy="106" rx="2.5" ry="6" stroke="url(#fd-orange)" stroke-width="1.5" opacity="0.8"/>
+    <path d="M285 124 H307" stroke="#E8F4FD" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
+    <path d="M288 124 v3 M292 124 v3 M296 124 v3 M300 124 v3 M304 124 v3" stroke="#0EA5E9" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <!-- Heat waves animated -->
+    <g id="fd-heatwaves" stroke="url(#fd-orange)" stroke-width="1.5" stroke-linecap="round" fill="none">
+      <path d="M282 138 q14 9 28 0" opacity="0.4"/>
+      <path d="M277 149 q19 12 38 0" opacity="0.22"/>
+    </g>
+  </g>
+
+  <!-- VELOX Fire Panel -->
+  <g id="fd-panel">
+    <rect x="218" y="170" width="104" height="76" rx="9" fill="url(#fd-glass)" stroke="#0EA5E9" stroke-width="1.5"/>
+    <rect x="230" y="181" width="54" height="20" rx="3" stroke="#094E72" stroke-width="1.5" opacity="0.7"/>
+    <path d="M236 191 h10 M252 191 h14 M272 191 h6" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+    <path d="M294 181 v20 M304 181 v20" stroke="#094E72" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+    <!-- Status LEDs -->
+    <g id="fd-panel-leds">
+      <circle cx="238" cy="214" r="2.5" stroke="#0EA5E9" stroke-width="1.5" fill="#0C1525"/>
+      <!-- Pulsing alert LED -->
+      <circle cx="252" cy="214" r="9" fill="url(#fd-pulse)"/>
+      <circle cx="252" cy="214" r="2.5" fill="url(#fd-orange)"/>
+      <circle cx="266" cy="214" r="2.5" stroke="#0EA5E9" stroke-width="1.5" fill="#0C1525"/>
+      <circle cx="280" cy="214" r="2.5" stroke="#0EA5E9" stroke-width="1.5" fill="#0C1525"/>
+      <circle cx="294" cy="214" r="2.5" stroke="#0EA5E9" stroke-width="1.5" fill="#0C1525"/>
+      <circle cx="238" cy="230" r="2.5" stroke="#0EA5E9" stroke-width="1.5" fill="#0C1525"/>
+      <circle cx="252" cy="230" r="2.5" stroke="#0EA5E9" stroke-width="1.5" fill="#0C1525"/>
+      <circle cx="266" cy="230" r="2.5" fill="#38BDF8"/>
+      <circle cx="280" cy="230" r="2.5" stroke="#0EA5E9" stroke-width="1.5" fill="#0C1525"/>
+      <circle cx="294" cy="230" r="2.5" stroke="#0EA5E9" stroke-width="1.5" fill="#0C1525"/>
+    </g>
+  </g>
+
+  <!-- Fire pulse on panel -->
+  <g id="fd-fire-pulse">
+    <circle cx="80" cy="167" r="18" fill="url(#fd-pulse)" opacity="0.4"/>
+  </g>
+
+  <!-- Ambience crosshairs -->
+  <g id="fd-ambience" stroke="#0EA5E9" stroke-width="1.5" stroke-linecap="round" opacity="0.35">
+    <path d="M46 246 v8 M42 250 h8"/>
+    <path d="M362 130 v8 M358 134 h8"/>
+  </g>
+</svg>
