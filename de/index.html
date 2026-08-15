@@ -2801,6 +2801,65 @@
         bottom: 16px;
       } */
     }
+
+    /* RTL Specific Overrides */
+    html[dir="rtl"] .at-fab,
+    html[dir="rtl"] .at-chat {
+      left: 20px;
+      right: auto;
+    }
+
+    @media (max-width: 640px) {
+      html[dir="rtl"] .at-chat {
+        left: 0;
+        right: 0;
+      }
+    }
+
+    html[dir="rtl"] .at-x {
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    html[dir="rtl"] .at-msg.user {
+      align-self: flex-start;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 5px;
+    }
+
+    html[dir="rtl"] .at-msg.bot {
+      align-self: flex-end;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 5px;
+    }
+
+    html[dir="rtl"] .proj-track {
+      animation: scroll-rtl 60s linear infinite;
+    }
+
+    html[dir="rtl"] .cert-track {
+      animation: scroll-cert-rtl 40s linear infinite;
+    }
+
+    @keyframes scroll-rtl {
+      from {
+        transform: translateX(50%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes scroll-cert-rtl {
+      from {
+        transform: translateX(0%);
+      }
+
+      to {
+        transform: translateX(50%);
+      }
+    }
   </style>
 </head>
 
@@ -2856,7 +2915,7 @@
           <li class="shrink-0"><a href="#projects" data-i18n="nav.projects">Projekte</a></li>
           <li class="shrink-0"><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
         </ul>
-        <a href="#contact" class="mobile-quote-text" data-i18n="nav.cta">Angebot anfordern</a>
+        <a href="#contact" class="mobile-quote-text shrink-0" data-i18n="nav.cta">Angebot anfordern</a>
       </nav>
       <div class="nav-actions">
         <div class="lang-wrap">

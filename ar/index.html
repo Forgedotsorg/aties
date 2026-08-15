@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="ar" dir="ltr">
+<html lang="ar" dir="rtl">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="head.title">ATEÏS الشرق الأوسط — أنظمة الإعلان العام والسلامة | دبي، الإمارات</title>
-  <meta name="description" data-i18n-content="ATEÏS الشرق الأوسط FZCO — رائدون في أنظمة الإعلان العام والإنذار الصوتي المعتمدة من EN54، وأنظمة اكتشاف الحرائق والصوت الاحترافي. نخدم الشرق الأوسط من دبي منذ عام 2006."
+  <meta name="description"
+    data-i18n-content="ATEÏS الشرق الأوسط FZCO — رائدون في أنظمة الإعلان العام والإنذار الصوتي المعتمدة من EN54، وأنظمة اكتشاف الحرائق والصوت الاحترافي. نخدم الشرق الأوسط من دبي منذ عام 2006."
     content="ATEÏS Middle East FZCO — Leading specialist in EN54-certified Public Address, Voice Alarm, Fire Detection, and Professional Audio systems. Proudly serving the Middle East from Dubai since 2006.">
   <meta name="keywords"
     content="PA/VA systems, voice alarm, fire detection, public address, Dubai, UAE, EN54, VELOX, IDA8, life safety, TERRACOM">
@@ -2801,6 +2802,65 @@
         bottom: 16px;
       } */
     }
+
+    /* RTL Specific Overrides */
+    html[dir="rtl"] .at-fab,
+    html[dir="rtl"] .at-chat {
+      left: 20px;
+      right: auto;
+    }
+
+    @media (max-width: 640px) {
+      html[dir="rtl"] .at-chat {
+        left: 0;
+        right: 0;
+      }
+    }
+
+    html[dir="rtl"] .at-x {
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    html[dir="rtl"] .at-msg.user {
+      align-self: flex-start;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 5px;
+    }
+
+    html[dir="rtl"] .at-msg.bot {
+      align-self: flex-end;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 5px;
+    }
+
+    html[dir="rtl"] .proj-track {
+      animation: scroll-rtl 60s linear infinite;
+    }
+
+    html[dir="rtl"] .cert-track {
+      animation: scroll-cert-rtl 40s linear infinite;
+    }
+
+    @keyframes scroll-rtl {
+      from {
+        transform: translateX(50%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes scroll-cert-rtl {
+      from {
+        transform: translateX(0%);
+      }
+
+      to {
+        transform: translateX(50%);
+      }
+    }
   </style>
 </head>
 
@@ -2856,7 +2916,7 @@
           <li class="shrink-0"><a href="#projects" data-i18n="nav.projects">المشاريع</a></li>
           <li class="shrink-0"><a href="#contact" data-i18n="nav.contact">اتصل بنا</a></li>
         </ul>
-        <a href="#contact" class="mobile-quote-text" data-i18n="nav.cta">احصل على عرض أسعار</a>
+        <a href="#contact" class="mobile-quote-text shrink-0" data-i18n="nav.cta">احصل على عرض أسعار</a>
       </nav>
       <div class="nav-actions">
         <div class="lang-wrap">
@@ -2919,8 +2979,10 @@
     <div class="hero-box">
       <div class="hero-content">
         <div class="hero-brand-text" data-i18n="hero.brand">ATEÏS</div>
-        <h1 class="hero-h1" data-i18n="hero.h1"><span class="line"><span class="inner">أنظمة <span class="em">الحماية والسلامة</span></span></span> <span class="line"><span class="inner">للعالم الحديث.</span></span></h1>
-        <p class="hero-lead" data-i18n="hero.lead">تصمم وتصنع وتركب ATEÏS الشرق الأوسط حلول الإعلان العام وإنذار الصوت والكشف عن الحرائق المعتمدة من EN54. مدعومة بأكثر من 40 عاماً من الخبرة، من دبي إلى العالم.</p>
+        <h1 class="hero-h1" data-i18n="hero.h1"><span class="line"><span class="inner">أنظمة <span class="em">الحماية
+                والسلامة</span></span></span> <span class="line"><span class="inner">للعالم الحديث.</span></span></h1>
+        <p class="hero-lead" data-i18n="hero.lead">تصمم وتصنع وتركب ATEÏS الشرق الأوسط حلول الإعلان العام وإنذار الصوت
+          والكشف عن الحرائق المعتمدة من EN54. مدعومة بأكثر من 40 عاماً من الخبرة، من دبي إلى العالم.</p>
         <div class="hero-bottom-row">
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary btn-lg">
@@ -2967,9 +3029,18 @@
         <div class="section-head rv">
           <span class="eyebrow" data-i18n="about.eyebrow">من نحن</span>
           <h2 data-i18n="about.h2">الابتكار في مجال السلامة، <span class="em">منذ 1980.</span></h2>
-          <p data-i18n="about.p1"><strong>ATEÏS الشرق الأوسط FZCO</strong> هي شركة هندسية مقرها دبي متخصصة في أنظمة <strong>الإعلان العام، إنذار الصوت، الإخلاء الصوتي، الكشف عن الحرائق</strong> والأنظمة الصوتية الاحترافية. تأسست عام 2006 كذراع الشرق الأوسط لمجموعة ATEÏS، ونحن نبني على أكثر من 40 عاماً من الخبرة العالمية في تكنولوجيا اتصالات السلامة.</p>
-          <p data-i18n="about.p2">نحن نقدم أنظمة إنذار صوتي وإخلاء وحلول للسلامة من الحرائق معتمدة من EN54 وجاهزة للعمل — بدءاً من تصميم النظام والتصنيع المحلي إلى التركيب والتشغيل والصيانة على مدار الساعة طوال أيام الأسبوع — معترف بها لوضوح الصوت العالي وتكنولوجيا DSP الشبكية والمراقبة السحابية.</p>
-          <p data-i18n="about.p3">تُبنى فلسفتنا الأساسية على سياسة 3R: <strong>المسؤولية (Responsibility)</strong> في التسليم الأخلاقي، و <strong>الاستجابة السريعة (Rapid Response)</strong> في الدعم الإقليمي، و <strong>العلاقات (Relationships)</strong> طويلة الأمد المبنية على الثقة والشفافية.</p>
+          <p data-i18n="about.p1"><strong>ATEÏS الشرق الأوسط FZCO</strong> هي شركة هندسية مقرها دبي متخصصة في أنظمة
+            <strong>الإعلان العام، إنذار الصوت، الإخلاء الصوتي، الكشف عن الحرائق</strong> والأنظمة الصوتية الاحترافية.
+            تأسست عام 2006 كذراع الشرق الأوسط لمجموعة ATEÏS، ونحن نبني على أكثر من 40 عاماً من الخبرة العالمية في
+            تكنولوجيا اتصالات السلامة.
+          </p>
+          <p data-i18n="about.p2">نحن نقدم أنظمة إنذار صوتي وإخلاء وحلول للسلامة من الحرائق معتمدة من EN54 وجاهزة للعمل
+            — بدءاً من تصميم النظام والتصنيع المحلي إلى التركيب والتشغيل والصيانة على مدار الساعة طوال أيام الأسبوع —
+            معترف بها لوضوح الصوت العالي وتكنولوجيا DSP الشبكية والمراقبة السحابية.</p>
+          <p data-i18n="about.p3">تُبنى فلسفتنا الأساسية على سياسة 3R: <strong>المسؤولية (Responsibility)</strong> في
+            التسليم الأخلاقي، و <strong>الاستجابة السريعة (Rapid Response)</strong> في الدعم الإقليمي، و
+            <strong>العلاقات (Relationships)</strong> طويلة الأمد المبنية على الثقة والشفافية.
+          </p>
 
           <p class="brand-note" data-i18n="about.brand_note">"قيادة الابتكار في صناعة السلامة"</p>
           <div class="about-tags">
@@ -2990,7 +3061,8 @@
                 </svg>
               </div>
               <h3 data-i18n="about.mission">مهمتنا</h3>
-              <p data-i18n="about.mission_text">ريادة سوق أنظمة الإعلان العام والإنذار الصوتي (PA/VA) من خلال الابتكار المستمر، وتزويد العملاء بحلول سلامة معتمدة من EN54، سهلة الاستخدام ومتكاملة للغاية.</p>
+              <p data-i18n="about.mission_text">ريادة سوق أنظمة الإعلان العام والإنذار الصوتي (PA/VA) من خلال الابتكار
+                المستمر، وتزويد العملاء بحلول سلامة معتمدة من EN54، سهلة الاستخدام ومتكاملة للغاية.</p>
             </div>
             <div class="about-card card">
               <div class="card-icon">
@@ -3000,7 +3072,8 @@
                 </svg>
               </div>
               <h3 data-i18n="about.vision">رؤيتنا</h3>
-              <p data-i18n="about.vision_text">التميز كالعلامة التجارية الأولى في أسواق السلامة والمدن الذكية من خلال تقديم حلول تقنية تعتمد على المسؤولية والابتكار والتميز.</p>
+              <p data-i18n="about.vision_text">التميز كالعلامة التجارية الأولى في أسواق السلامة والمدن الذكية من خلال
+                تقديم حلول تقنية تعتمد على المسؤولية والابتكار والتميز.</p>
             </div>
             <div class="about-card card">
               <div class="card-icon">
@@ -3009,7 +3082,8 @@
                 </svg>
               </div>
               <h3 data-i18n="about.innovation">الابتكار</h3>
-              <p data-i18n="about.innovation_text">بحث وتطوير مستمر مع شبكات DSP، والمراقبة السحابية، ومنصات توزيع الصوت عبر بروتوكول الإنترنت (IP).</p>
+              <p data-i18n="about.innovation_text">بحث وتطوير مستمر مع شبكات DSP، والمراقبة السحابية، ومنصات توزيع الصوت
+                عبر بروتوكول الإنترنت (IP).</p>
             </div>
             <div class="about-card card">
               <div class="card-icon">
@@ -3021,7 +3095,8 @@
                 </svg>
               </div>
               <h3 data-i18n="about.team">فريقنا</h3>
-              <p data-i18n="about.team_text">حوالي 60 متخصصاً مقيمين في الإمارات — مهندسون ومدراء مشاريع وفنيو صيانة.</p>
+              <p data-i18n="about.team_text">حوالي 60 متخصصاً مقيمين في الإمارات — مهندسون ومدراء مشاريع وفنيو صيانة.
+              </p>
             </div>
             <div class="about-card card span2">
               <div>
@@ -3035,12 +3110,14 @@
                     </svg>
                   </div>
                   <h3 data-i18n="about.global">تواجدنا العالمي</h3>
-                  <p data-i18n="about.global_text">المقر الرئيسي في سويسرا مع مكاتب إقليمية في الإمارات، أوروبا، روسيا، فرنسا، المملكة المتحدة والصين — علامة تجارية واحدة متكاملة.</p>
+                  <p data-i18n="about.global_text">المقر الرئيسي في سويسرا مع مكاتب إقليمية في الإمارات، أوروبا، روسيا،
+                    فرنسا، المملكة المتحدة والصين — علامة تجارية واحدة متكاملة.</p>
                 </div>
                 <div class="country-tags">
                   <span class="tag" data-i18n="country.1">الشرق الأوسط</span><span class="tag"
                     data-i18n="country.2">أوروبا</span>
-                  <span class="tag" data-i18n="country.3">روسيا</span><span class="tag" data-i18n="country.4">المملكة المتحدة</span>
+                  <span class="tag" data-i18n="country.3">روسيا</span><span class="tag" data-i18n="country.4">المملكة
+                    المتحدة</span>
                   <span class="tag" data-i18n="country.5">فرنسا</span><span class="tag"
                     data-i18n="country.6">الصين</span>
                 </div>
@@ -3059,7 +3136,8 @@
         <div class="section-info sticky-col rv">
           <span class="eyebrow" data-i18n="timeline.eyebrow">مسيرتنا</span>
           <h2 data-i18n="timeline.h2">Four Decades of <span class="em">Engineering Excellence.</span></h2>
-          <p data-i18n="timeline.p">من ريادة أجهزة الصوت في الثمانينيات إلى تقديم أحدث أنظمة الإخلاء الصوتي والمدن الذكية المعتمدة من EN54 في جميع أنحاء العالم.</p>
+          <p data-i18n="timeline.p">من ريادة أجهزة الصوت في الثمانينيات إلى تقديم أحدث أنظمة الإخلاء الصوتي والمدن
+            الذكية المعتمدة من EN54 في جميع أنحاء العالم.</p>
         </div>
         <div class="timeline-container">
           <div class="timeline-line"></div>
@@ -3070,7 +3148,8 @@
             <div class="timeline-card card">
               <div class="timeline-year">1980</div>
               <h3 data-i18n="timeline.1980.title">تأسيس ATEÏS</h3>
-              <p data-i18n="timeline.1980.desc">بناء سمعة قوية مبكرة من خلال هندسة أجهزة صوتية متخصصة وعالية الدقة لمحطات الراديو المستقلة.</p>
+              <p data-i18n="timeline.1980.desc">بناء سمعة قوية مبكرة من خلال هندسة أجهزة صوتية متخصصة وعالية الدقة
+                لمحطات الراديو المستقلة.</p>
             </div>
           </div>
 
@@ -3088,7 +3167,8 @@
             <div class="timeline-card card">
               <div class="timeline-year">1990s</div>
               <h3 data-i18n="timeline.1990s.title">تحول استراتيجي</h3>
-              <p data-i18n="timeline.1990s.desc">بسبب المنافسة المتزايدة في سوق أجهزة الصوت، ركزت الشركة استراتيجيتها الجديدة.</p>
+              <p data-i18n="timeline.1990s.desc">بسبب المنافسة المتزايدة في سوق أجهزة الصوت، ركزت الشركة استراتيجيتها
+                الجديدة.</p>
             </div>
           </div>
 
@@ -3097,7 +3177,8 @@
             <div class="timeline-card card">
               <div class="timeline-year">1995</div>
               <h3 data-i18n="timeline.1995.title">أسواق جديدة</h3>
-              <p data-i18n="timeline.1995.desc">دخلت ATEÏS سوقين رئيسيين جديدين: إلكترونيات المسارح وأنظمة الإعلان العام.</p>
+              <p data-i18n="timeline.1995.desc">دخلت ATEÏS سوقين رئيسيين جديدين: إلكترونيات المسارح وأنظمة الإعلان
+                العام.</p>
             </div>
           </div>
 
@@ -3106,7 +3187,8 @@
             <div class="timeline-card card">
               <div class="timeline-year">1999</div>
               <h3 data-i18n="timeline.1999.title">إنجاز مع SNCF</h3>
-              <p data-i18n="timeline.1999.desc">تطوير المصفوفة الصوتية SAM 100 و 200 للشركة الوطنية للسكك الحديدية الفرنسية (SNCF)، مما وضع معياراً لأنظمة الإعلان التي يتحكم فيها الكمبيوتر.</p>
+              <p data-i18n="timeline.1999.desc">تطوير المصفوفة الصوتية SAM 100 و 200 للشركة الوطنية للسكك الحديدية
+                الفرنسية (SNCF)، مما وضع معياراً لأنظمة الإعلان التي يتحكم فيها الكمبيوتر.</p>
             </div>
           </div>
 
@@ -3115,7 +3197,8 @@
             <div class="timeline-card card">
               <div class="timeline-year">2006</div>
               <h3 data-i18n="timeline.2006.title">تأسيس ATEÏS الشرق الأوسط</h3>
-              <p data-i18n="timeline.2006.desc">تأسست في واحة دبي للسيليكون بالإمارات لخدمة أسواق الشرق الأوسط والهند. بدأت بمهندسين اثنين فقط وسرعان ما توسعت لفريق يضم أكثر من 60 محترفاً.</p>
+              <p data-i18n="timeline.2006.desc">تأسست في واحة دبي للسيليكون بالإمارات لخدمة أسواق الشرق الأوسط والهند.
+                بدأت بمهندسين اثنين فقط وسرعان ما توسعت لفريق يضم أكثر من 60 محترفاً.</p>
             </div>
           </div>
 
@@ -3124,7 +3207,8 @@
             <div class="timeline-card card">
               <div class="timeline-year">Post-2006</div>
               <h3 data-i18n="timeline.post2006.title">إطلاق VELOX</h3>
-              <p data-i18n="timeline.post2006.desc">تطوير علامتنا التجارية الخاصة باكتشاف الحرائق والإنذار VELOX. تصنع محلياً في الإمارات وتوزع حالياً في قرابة 40 دولة.</p>
+              <p data-i18n="timeline.post2006.desc">تطوير علامتنا التجارية الخاصة باكتشاف الحرائق والإنذار VELOX. تصنع
+                محلياً في الإمارات وتوزع حالياً في قرابة 40 دولة.</p>
             </div>
           </div>
 
@@ -3133,7 +3217,8 @@
             <div class="timeline-card card">
               <div class="timeline-year">2017</div>
               <h3 data-i18n="timeline.2017.title">التوسع الروسي</h3>
-              <p data-i18n="timeline.2017.desc">مواصلة توسعنا العالمي من خلال إنشاء مكتب تشغيلي جديد في موسكو، روسيا.</p>
+              <p data-i18n="timeline.2017.desc">مواصلة توسعنا العالمي من خلال إنشاء مكتب تشغيلي جديد في موسكو، روسيا.
+              </p>
             </div>
           </div>
 
@@ -3142,7 +3227,8 @@
             <div class="timeline-card card">
               <div class="timeline-year">2020</div>
               <h3 data-i18n="timeline.2020.title">40 عاماً من التميز</h3>
-              <p data-i18n="timeline.2020.desc">احتفلت مجموعة ATEÏS بفخر بأربعة عقود من الابتكار العالمي في مجال السلامة وتكنولوجيا الصوت الاحترافية.</p>
+              <p data-i18n="timeline.2020.desc">احتفلت مجموعة ATEÏS بفخر بأربعة عقود من الابتكار العالمي في مجال السلامة
+                وتكنولوجيا الصوت الاحترافية.</p>
             </div>
           </div>
 
@@ -3157,7 +3243,8 @@
       <div class="section-head rv">
         <span class="eyebrow" data-i18n="sol.eyebrow">حلول متكاملة</span>
         <h2 data-i18n="sol.h2">أنظمة <span class="em">الصوت والسلامة</span> المتكاملة.</h2>
-        <p data-i18n="sol.lead">من لوحات الكشف عن الحرائق المستقلة إلى أنظمة الإعلان العام الشبكية على مستوى المدينة، نحن نصمم أنظمة أمان متكاملة تعمل معاً في البيئات الحرجة.</p>
+        <p data-i18n="sol.lead">من لوحات الكشف عن الحرائق المستقلة إلى أنظمة الإعلان العام الشبكية على مستوى المدينة،
+          نحن نصمم أنظمة أمان متكاملة تعمل معاً في البيئات الحرجة.</p>
       </div>
       <div class="sol-grid">
         <div class="sol-card card rv">
@@ -3165,7 +3252,8 @@
             <img src="../assets/pillar1.png" alt="PA/VA Systems" />
           </div> -->
           <h3 data-i18n="sol.pillar1.h3">الإعلان العام والإخلاء الصوتي</h3>
-          <p data-i18n="sol.pillar1.p">أنظمة متوافقة مع EN54 للنداء المباشر والإخلاء التلقائي من الحرائق في المراكز التجارية والمطارات والمكاتب والجامعات — مع وضوح صوتي عالي وتحكم متعدد المناطق.</p>
+          <p data-i18n="sol.pillar1.p">أنظمة متوافقة مع EN54 للنداء المباشر والإخلاء التلقائي من الحرائق في المراكز
+            التجارية والمطارات والمكاتب والجامعات — مع وضوح صوتي عالي وتحكم متعدد المناطق.</p>
           <div class="pillar-tags">
             <span class="tag" data-i18n="sol.p1.tag1">BOUTIQUE</span>
             <span class="tag" data-i18n="sol.p1.tag2">IDA8</span>
@@ -3180,7 +3268,8 @@
             <img src="../assets/pillar2.png" alt="Fire Detection" />
           </div> -->
           <h3 data-i18n="sol.pillar2.h3">اكتشاف الحرائق والسلامة</h3>
-          <p data-i18n="sol.pillar2.p">لوحات وكواشف إنذار الحريق من علامة VELOX المصنوعة في الإمارات للإنذار المبكر — من الفلل الفردية إلى الحلول الشاملة للمدن، مع مراقبة سحابية ودعم على مدار الساعة.</p>
+          <p data-i18n="sol.pillar2.p">لوحات وكواشف إنذار الحريق من علامة VELOX المصنوعة في الإمارات للإنذار المبكر — من
+            الفلل الفردية إلى الحلول الشاملة للمدن، مع مراقبة سحابية ودعم على مدار الساعة.</p>
           <div class="pillar-tags">
             <span class="tag" data-i18n="sol.p2.tag1">لوحات VELOX</span>
             <span class="tag" data-i18n="sol.p2.tag2">قابلة للعنونة</span>
@@ -3194,7 +3283,8 @@
             <img src="../assets/pillar3.png" alt="Audio over IP" />
           </div> -->
           <h3 data-i18n="sol.pillar3.h3">الصوت عبر بروتوكول الإنترنت والصوت الاحترافي</h3>
-          <p data-i18n="sol.pillar3.p">منصة VOX-NET المعتمدة على إيثرنت/IP تتيح التوزيع الصوتي والموسيقى الخلفية. أنظمة مؤتمرات DSP، والاتصال الداخلي (إنتركم)، وتعزيز الصوت لأماكن الترفيه.</p>
+          <p data-i18n="sol.pillar3.p">منصة VOX-NET المعتمدة على إيثرنت/IP تتيح التوزيع الصوتي والموسيقى الخلفية. أنظمة
+            مؤتمرات DSP، والاتصال الداخلي (إنتركم)، وتعزيز الصوت لأماكن الترفيه.</p>
           <div class="pillar-tags">
             <span class="tag" data-i18n="sol.p3.tag1">VOX-NET</span>
             <span class="tag" data-i18n="sol.p3.tag2">مكبرات DPA</span>
@@ -3213,7 +3303,8 @@
       <div class="section-head rv">
         <span class="eyebrow" data-i18n="ind.eyebrow">القطاعات التي نخدمها</span>
         <h2 data-i18n="ind.h2">تأمين كل <span class="em">القطاعات.</span></h2>
-        <p data-i18n="ind.lead">نحن نقدم أنظمة الإعلان العام والإخلاء الصوتي المعتمدة من EN54 وحلول السلامة المتكاملة للقطاعات التي تتطلب اتصالات موثوقة وعالية الأداء في الشرق الأوسط وعالمياً.</p>
+        <p data-i18n="ind.lead">نحن نقدم أنظمة الإعلان العام والإخلاء الصوتي المعتمدة من EN54 وحلول السلامة المتكاملة
+          للقطاعات التي تتطلب اتصالات موثوقة وعالية الأداء في الشرق الأوسط وعالمياً.</p>
       </div>
       <div class="ind-grid">
         <div class="ind-card card rv">
@@ -3227,7 +3318,8 @@
               <path d="M11 3.5V1.8" />
             </svg></div>
           <h3 data-i18n="sector.corporate">الشركات والتجزئة</h3>
-          <p data-i18n="sector.corporate.p">مراكز التسوق ومقرات الشركات وسلاسل التجزئة التي تتطلب موسيقى خلفية ونداءات طوارئ.</p>
+          <p data-i18n="sector.corporate.p">مراكز التسوق ومقرات الشركات وسلاسل التجزئة التي تتطلب موسيقى خلفية ونداءات
+            طوارئ.</p>
         </div>
         <div class="ind-card card rv">
           <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -3273,7 +3365,8 @@
               <path d="M8 4v6h8V4" />
             </svg></div>
           <h3 data-i18n="sector.transport">النقل</h3>
-          <p data-i18n="sector.transport.p">المطارات وشبكات المترو ومحطات القطار المتوافقة كلياً مع معايير التوافق الكهرومغناطيسي للسكك الحديدية.</p>
+          <p data-i18n="sector.transport.p">المطارات وشبكات المترو ومحطات القطار المتوافقة كلياً مع معايير التوافق
+            الكهرومغناطيسي للسكك الحديدية.</p>
         </div>
         <div class="ind-card card rv">
           <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -3286,7 +3379,8 @@
               <path d="M3 21h18" />
             </svg></div>
           <h3 data-i18n="sector.worship">دور العبادة</h3>
-          <p data-i18n="sector.worship.p">المساجد والكنائس التي تتطلب ضبطاً صوتياً نقياً وإدارة رقمية للإشارات (DSP).</p>
+          <p data-i18n="sector.worship.p">المساجد والكنائس التي تتطلب ضبطاً صوتياً نقياً وإدارة رقمية للإشارات (DSP).
+          </p>
         </div>
       </div>
     </div>
@@ -3298,7 +3392,8 @@
       <div class="section-head rv">
         <span class="eyebrow" data-i18n="prod.eyebrow">كتالوج المنتجات</span>
         <h2 data-i18n="prod.h2">مجموعة شاملة للسلامة <span class="em">من الحرائق.</span></h2>
-        <p data-i18n="prod.lead">من وحدات التحكم المعتمدة EN54 إلى مكبرات الصوت الدقيقة — تم تصميم كل منتج للبيئات الحرجة.</p>
+        <p data-i18n="prod.lead">من وحدات التحكم المعتمدة EN54 إلى مكبرات الصوت الدقيقة — تم تصميم كل منتج للبيئات
+          الحرجة.</p>
       </div>
       <div class="prod-tabs" id="prodTabs">
         <button class="prod-tab active" data-filter="all" data-i18n="ptab.all">الكل</button>
@@ -3323,10 +3418,12 @@
           <div class="prod-card-body">
             <h6 class="prod-cat" data-i18n="pcat.pava">أنظمة الإعلان العام</h6>
             <h3 data-i18n="prod.1.title">سلسلة وحدات التحكم IDA8</h3>
-            <p data-i18n="prod.1.desc">وحدات تحكم بنظام PA/VA قابلة للربط الشبكي تدعم وضع المصفوفة والمحول مع وحدات توسعة للتركيبات الضخمة متعددة المناطق.</p>
+            <p data-i18n="prod.1.desc">وحدات تحكم بنظام PA/VA قابلة للربط الشبكي تدعم وضع المصفوفة والمحول مع وحدات
+              توسعة للتركيبات الضخمة متعددة المناطق.</p>
             <div class="prod-specs">
               <span class="prod-spec" data-i18n="prod.1.t1">EN54-16</span><span class="prod-spec"
-                data-i18n="prod.1.t2">وضع المصفوفة</span><span class="prod-spec" data-i18n="prod.1.t3">قابل للربط الشبكي</span>
+                data-i18n="prod.1.t2">وضع المصفوفة</span><span class="prod-spec" data-i18n="prod.1.t3">قابل للربط
+                الشبكي</span>
             </div>
             <a href="https://ateis.ae/products/controller-ida8c-matrix-mode/" target="_blank" class="prod-link"><span
                 data-i18n="prod.view">عرض التفاصيل</span> <svg viewBox="0 0 24 24">
@@ -3344,7 +3441,8 @@
           <div class="prod-card-body">
             <h6 class="prod-cat" data-i18n="pcat.pava">أنظمة الإعلان العام</h6>
             <h3 data-i18n="prod.2.title">سلسلة BOUTIQUE (BTQ)</h3>
-            <p data-i18n="prod.2.desc">وحدات تحكم رئيسية مرنة للغاية (BTQ-VM4/VM8) توفر من 4 إلى 8 مناطق، مصممة للتركيبات المتوسطة والكبيرة مع DSP مدمج.</p>
+            <p data-i18n="prod.2.desc">وحدات تحكم رئيسية مرنة للغاية (BTQ-VM4/VM8) توفر من 4 إلى 8 مناطق، مصممة
+              للتركيبات المتوسطة والكبيرة مع DSP مدمج.</p>
             <div class="prod-specs">
               <span class="prod-spec" data-i18n="prod.2.t1">4-8 مناطق</span><span class="prod-spec"
                 data-i18n="prod.2.t2">DSP مدمج</span><span class="prod-spec" data-i18n="prod.2.t3">EN54-16</span>
@@ -3360,7 +3458,8 @@
           <div class="prod-card-body">
             <h6 class="prod-cat" data-i18n="pcat.pava">أنظمة الإعلان العام</h6>
             <h3 data-i18n="prod.3.title">سلسلة DIVA</h3>
-            <p data-i18n="prod.3.desc">وحدات تحكم PA/VA مدمجة ومتعددة القنوات (مثل DIVA-8MG2) مناسبة للمساحات الصغيرة مع الحفاظ على التوافق التام مع EN54.</p>
+            <p data-i18n="prod.3.desc">وحدات تحكم PA/VA مدمجة ومتعددة القنوات (مثل DIVA-8MG2) مناسبة للمساحات الصغيرة مع
+              الحفاظ على التوافق التام مع EN54.</p>
             <div class="prod-specs">
               <span class="prod-spec" data-i18n="prod.3.t1">مدمج</span><span class="prod-spec"
                 data-i18n="prod.3.t2">متعدد القنوات</span><span class="prod-spec" data-i18n="prod.3.t3">EN54-16</span>
@@ -3377,7 +3476,8 @@
           <div class="prod-card-body">
             <h6 class="prod-cat" data-i18n="pcat.consoles">الميكروفونات ووحدات التحكم</h6>
             <h3 data-i18n="prod.4.title">وحدات نداء</h3>
-            <p data-i18n="prod.4.desc">وحدات نداء متقدمة تشمل PPM-AS، وشاشة اللمس PSS-AS، ووحدات الحائط (CD-8AS/16AS، CD-TOUCHAS)، و PPM-IT5 القائم على IP.</p>
+            <p data-i18n="prod.4.desc">وحدات نداء متقدمة تشمل PPM-AS، وشاشة اللمس PSS-AS، ووحدات الحائط (CD-8AS/16AS،
+              CD-TOUCHAS)، و PPM-IT5 القائم على IP.</p>
             <div class="prod-specs">
               <span class="prod-spec" data-i18n="prod.4.t1">شاشة لمس</span><span class="prod-spec"
                 data-i18n="prod.4.t2">وحدات IP</span>
@@ -3393,7 +3493,8 @@
           <div class="prod-card-body">
             <h6 class="prod-cat" data-i18n="pcat.consoles">الميكروفونات ووحدات التحكم</h6>
             <h3 data-i18n="prod.5.title">الميكروفونات وأجهزة الاستشعار</h3>
-            <p data-i18n="prod.5.desc">ميكروفونات مكتبية (PM1)، ميكروفونات إطفاء قوية (SHM1)، وميكروفونات رقمية لاستشعار الضوضاء (سلسلة DNM) تعدل مستوى الصوت تلقائيًا.</p>
+            <p data-i18n="prod.5.desc">ميكروفونات مكتبية (PM1)، ميكروفونات إطفاء قوية (SHM1)، وميكروفونات رقمية لاستشعار
+              الضوضاء (سلسلة DNM) تعدل مستوى الصوت تلقائيًا.</p>
             <div class="prod-specs">
               <span class="prod-spec" data-i18n="prod.5.t1">ميكروفونات إطفاء</span><span class="prod-spec"
                 data-i18n="prod.5.t2">استشعار الضوضاء</span>
@@ -3415,7 +3516,8 @@
           <div class="prod-card-body">
             <h6 class="prod-cat" data-i18n="pcat.speaker">السماعات</h6>
             <h3 data-i18n="prod.6.title">مكبرات صوت سقفية RCS</h3>
-            <p data-i18n="prod.6.desc">مكبرات صوت سقفية معدنية دائرية (سلسلة RCS) للتركيب الداخلي المخفي. مصممة لوضوح عالٍ للكلام في تطبيقات سلامة الأرواح.</p>
+            <p data-i18n="prod.6.desc">مكبرات صوت سقفية معدنية دائرية (سلسلة RCS) للتركيب الداخلي المخفي. مصممة لوضوح
+              عالٍ للكلام في تطبيقات سلامة الأرواح.</p>
             <div class="prod-specs">
               <span class="prod-spec" data-i18n="prod.6.t1">معدني دائري</span><span class="prod-spec"
                 data-i18n="prod.6.t2">مقاوم للطقس</span><span class="prod-spec" data-i18n="prod.6.t3">EN54-24</span>
@@ -3431,7 +3533,8 @@
           <div class="prod-card-body">
             <h6 class="prod-cat" data-i18n="pcat.speaker">السماعات</h6>
             <h3 data-i18n="prod.7.title">مكبرات صوت عمودية وخاصة</h3>
-            <p data-i18n="prod.7.desc">مكبرات صوت عمودية معدنية (سلسلة MCS) للقاعات الكبيرة، ومكبرات صوت بوق للاستخدام الصناعي، ومكبرات صوت كروية معلقة، وفلاشات مرئية LED.</p>
+            <p data-i18n="prod.7.desc">مكبرات صوت عمودية معدنية (سلسلة MCS) للقاعات الكبيرة، ومكبرات صوت بوق للاستخدام
+              الصناعي، ومكبرات صوت كروية معلقة، وفلاشات مرئية LED.</p>
             <div class="prod-specs">
               <span class="prod-spec" data-i18n="prod.7.t1">مصفوفات MCS</span><span class="prod-spec"
                 data-i18n="prod.7.t2">بوق</span><span class="prod-spec" data-i18n="prod.7.t3">فلاشات LED</span>
@@ -3448,7 +3551,8 @@
           <div class="prod-card-body">
             <h6 class="prod-cat" data-i18n="pcat.amp">مكبرات الصوت</h6>
             <h3 data-i18n="prod.8.title">مكبرات طاقة DSP</h3>
-            <p data-i18n="prod.8.desc">مكبرات طاقة DSP من الفئة D عالية الكفاءة مصممة للعمل 24/7 مع معالجة صوتية مدمجة، ومراقبة المعاوقة، واكتشاف الأخطاء.</p>
+            <p data-i18n="prod.8.desc">مكبرات طاقة DSP من الفئة D عالية الكفاءة مصممة للعمل 24/7 مع معالجة صوتية مدمجة،
+              ومراقبة المعاوقة، واكتشاف الأخطاء.</p>
             <div class="prod-specs">
               <span class="prod-spec" data-i18n="prod.8.t1">فئة D</span><span class="prod-spec"
                 data-i18n="prod.8.t2">DSP مدمج</span><span class="prod-spec" data-i18n="prod.8.t3">اكتشاف الأخطاء</span>
@@ -3465,11 +3569,12 @@
           <div class="prod-card-body">
             <h6 class="prod-cat" data-i18n="pcat.audio">الصوت التجاري والشبكات</h6>
             <h3 data-i18n="prod.9.title">منصة الصوت عبر بروتوكول الإنترنت VOX-NET</h3>
-            <p data-i18n="prod.9.desc">أجهزة تشفير وفك تشفير الصوت عبر بروتوكول الإنترنت لإرسال الصوت بزمن انتقال منخفض عبر شبكات تكنولوجيا المعلومات القياسية للموسيقى الخلفية والنداءات المحددة.</p>
+            <p data-i18n="prod.9.desc">أجهزة تشفير وفك تشفير الصوت عبر بروتوكول الإنترنت لإرسال الصوت بزمن انتقال منخفض
+              عبر شبكات تكنولوجيا المعلومات القياسية للموسيقى الخلفية والنداءات المحددة.</p>
             <div class="prod-specs">
               <span class="prod-spec" data-i18n="prod.9.t1">قائم على IP</span><span class="prod-spec"
-                data-i18n="prod.9.t2">كمون منخفض</span><span class="prod-spec"
-                data-i18n="prod.9.t3">تشفير/فك تشفير</span>
+                data-i18n="prod.9.t2">كمون منخفض</span><span class="prod-spec" data-i18n="prod.9.t3">تشفير/فك
+                تشفير</span>
             </div>
             <a href="https://ateis.ae/product-category/?category=12" target="_blank" class="prod-link"><span
                 data-i18n="prod.view_range">عرض المجموعة</span> <svg viewBox="0 0 24 24">
@@ -3483,10 +3588,12 @@
           <div class="prod-card-body">
             <h6 class="prod-cat" data-i18n="pcat.intercom">أنظمة الاتصال الداخلي</h6>
             <h3 data-i18n="prod.10.title">TERRACOM و MAGELLAN</h3>
-            <p data-i18n="prod.10.desc">أنظمة اتصال داخلي IP احترافية تتميز بإلغاء الصدى، ومعالجة DSP المتقدمة، والتكامل الكامل مع شبكات PA/VA.</p>
+            <p data-i18n="prod.10.desc">أنظمة اتصال داخلي IP احترافية تتميز بإلغاء الصدى، ومعالجة DSP المتقدمة، والتكامل
+              الكامل مع شبكات PA/VA.</p>
             <div class="prod-specs">
               <span class="prod-spec" data-i18n="prod.10.t1">اتصال داخلي IP</span><span class="prod-spec"
-                data-i18n="prod.10.t2">إلغاء الصدى</span><span class="prod-spec" data-i18n="prod.10.t3">مرتبط بـ PA/VA</span>
+                data-i18n="prod.10.t2">إلغاء الصدى</span><span class="prod-spec" data-i18n="prod.10.t3">مرتبط بـ
+                PA/VA</span>
             </div>
             <a href="https://ateis.ae/product-category/?category=6" target="_blank" class="prod-link"><span
                 data-i18n="prod.view_range">عرض المجموعة</span> <svg viewBox="0 0 24 24">
@@ -3504,10 +3611,12 @@
           <div class="prod-card-body">
             <h6 class="prod-cat" data-i18n="pcat.software">البرمجيات</h6>
             <h3 data-i18n="prod.11.title">برنامج ATEÏS Studio</h3>
-            <p data-i18n="prod.11.desc">مجموعة برامج قوية ومملوكة توفر مجموعة كاملة من الأدوات وكتل البناء بالسحب والإفلات لتكوين النظام في الوقت الفعلي ومراقبته وتعديل DSP.</p>
+            <p data-i18n="prod.11.desc">مجموعة برامج قوية ومملوكة توفر مجموعة كاملة من الأدوات وكتل البناء بالسحب
+              والإفلات لتكوين النظام في الوقت الفعلي ومراقبته وتعديل DSP.</p>
             <div class="prod-specs">
               <span class="prod-spec" data-i18n="prod.11.t1">تكوين في الوقت الحقيقي</span><span class="prod-spec"
-                data-i18n="prod.11.t2">السحب والإفلات</span><span class="prod-spec" data-i18n="prod.11.t3">تحكم DSP</span>
+                data-i18n="prod.11.t2">السحب والإفلات</span><span class="prod-spec" data-i18n="prod.11.t3">تحكم
+                DSP</span>
             </div>
             <a href="https://ateis.ae/products/ateis-studio-software/" target="_blank" class="prod-link"><span
                 data-i18n="prod.view">عرض التفاصيل</span>
@@ -3522,7 +3631,8 @@
           <div class="prod-card-body">
             <h6 class="prod-cat" data-i18n="pcat.acc">الملحقات</h6>
             <h3 data-i18n="prod.12.title">ملحقات النظام</h3>
-            <p data-i18n="prod.12.desc">أكمل تركيبك باستخدام وحدات التحكم عن بعد (سلسلة RAC، سلسلة URC)، ومفاتيح الشبكة، ووحدات الجسور السطحية.</p>
+            <p data-i18n="prod.12.desc">أكمل تركيبك باستخدام وحدات التحكم عن بعد (سلسلة RAC، سلسلة URC)، ومفاتيح الشبكة،
+              ووحدات الجسور السطحية.</p>
             <div class="prod-specs">
               <span class="prod-spec" data-i18n="prod.12.t1">أجهزة تحكم RAC/URC</span><span class="prod-spec"
                 data-i18n="prod.12.t2">مفاتيح الشبكة</span>
@@ -3539,12 +3649,15 @@
           <div class="prod-card-body">
             <h6 class="prod-cat" data-i18n="pcat.velox">اكتشاف الحرائق</h6>
             <h3 data-i18n="prod.13.title">أنظمة إنذار الحريق VELOX</h3>
-            <p data-i18n="prod.13.desc">لوحات تحكم وكاشفات إنذار الحريق القابلة للعنونة الخاصة بنا، المصنعة في الإمارات، مع مراقبة سحابية وتكامل للإنذار المبكر.</p>
+            <p data-i18n="prod.13.desc">لوحات تحكم وكاشفات إنذار الحريق القابلة للعنونة الخاصة بنا، المصنعة في الإمارات،
+              مع مراقبة سحابية وتكامل للإنذار المبكر.</p>
             <div class="prod-specs">
               <span class="prod-spec" data-i18n="prod.13.t1">صنع في الإمارات</span><span class="prod-spec"
-                data-i18n="prod.13.t2">قابل للعنونة</span><span class="prod-spec" data-i18n="prod.13.t3">مراقبة سحابية</span>
+                data-i18n="prod.13.t2">قابل للعنونة</span><span class="prod-spec" data-i18n="prod.13.t3">مراقبة
+                سحابية</span>
             </div>
-            <a href="https://velox.ae/" target="_blank" class="prod-link"><span data-i18n="prod.velox">زيارة VELOX</span> <svg viewBox="0 0 24 24">
+            <a href="https://velox.ae/" target="_blank" class="prod-link"><span data-i18n="prod.velox">زيارة
+                VELOX</span> <svg viewBox="0 0 24 24">
                 <path d="M7 17 17 7M9 7h8v8" />
               </svg></a>
           </div>
@@ -3573,7 +3686,8 @@
               <path d="M4.8 18.8a12.5 12.5 0 0 0 14.4 0" />
             </svg></div>
           <h4 data-i18n="proc.step1.title">التصميم والهندسة</h4>
-          <p data-i18n="proc.step1.desc">محاكاة صوتية وهندسة معمارية للنظام متوافقة مع EN54 مصممة خصيصًا لمتطلبات منشأتك.</p>
+          <p data-i18n="proc.step1.desc">محاكاة صوتية وهندسة معمارية للنظام متوافقة مع EN54 مصممة خصيصًا لمتطلبات
+            منشأتك.</p>
         </div>
         <div class="step rv">
           <div class="step-dot"><span class="step-num">2</span><svg xmlns="http://www.w3.org/2000/svg"
@@ -3583,7 +3697,8 @@
               <path d="M9 21v-5h6v5" />
             </svg></div>
           <h4 data-i18n="proc.step2.title">التصنيع المحلي</h4>
-          <p data-i18n="proc.step2.desc">تصنيع دقيق هنا في الإمارات، مما يضمن سرعة التسليم ومراقبة جودة لا هوادة فيها.</p>
+          <p data-i18n="proc.step2.desc">تصنيع دقيق هنا في الإمارات، مما يضمن سرعة التسليم ومراقبة جودة لا هوادة فيها.
+          </p>
         </div>
         <div class="step rv">
           <div class="step-dot"><span class="step-num">3</span><svg xmlns="http://www.w3.org/2000/svg"
@@ -3595,7 +3710,8 @@
               <path d="M10.9 7.2 6.6 15.8M13.1 7.2l4.3 8.6M8 18h8" />
             </svg></div>
           <h4 data-i18n="proc.step3.title">تكامل الأنظمة</h4>
-          <p data-i18n="proc.step3.desc">تكامل سلس مع أنظمة إدارة المباني (BMS)، لوحات إنذار الحريق، والبنية التحتية للمدن الذكية عبر بروتوكولات مفتوحة.</p>
+          <p data-i18n="proc.step3.desc">تكامل سلس مع أنظمة إدارة المباني (BMS)، لوحات إنذار الحريق، والبنية التحتية
+            للمدن الذكية عبر بروتوكولات مفتوحة.</p>
         </div>
         <div class="step rv">
           <div class="step-dot"><span class="step-num">4</span><svg xmlns="http://www.w3.org/2000/svg"
@@ -3607,7 +3723,8 @@
               <circle cx="12" cy="16.5" r="1.3" fill="currentColor" stroke="none" />
             </svg></div>
           <h4 data-i18n="proc.step4.title">الاختبار والتشغيل</h4>
-          <p data-i18n="proc.step4.desc">اختبار صارم في الموقع من قبل مهندسين معتمدين لضمان أهداف مؤشر نقل الكلام (STI) ومستوى ضغط الصوت (SPL).</p>
+          <p data-i18n="proc.step4.desc">اختبار صارم في الموقع من قبل مهندسين معتمدين لضمان أهداف مؤشر نقل الكلام (STI)
+            ومستوى ضغط الصوت (SPL).</p>
         </div>
         <div class="step rv">
           <div class="step-dot"><span class="step-num">5</span><svg xmlns="http://www.w3.org/2000/svg"
@@ -3943,7 +4060,8 @@
       <div class="section-head section-head-centered rv">
         <span class="eyebrow" data-i18n="cert.eyebrow">المعايير العالمية</span>
         <h2 data-i18n="cert.h2">Strictly <span class="em">Certified.</span></h2>
-        <p data-i18n="cert.lead">يتم اختبار أنظمتنا واعتمادها بصرامة لضمان الموثوقية المطلقة أثناء حالات الطوارئ الحرجة المتعلقة بسلامة الأرواح.</p>
+        <p data-i18n="cert.lead">يتم اختبار أنظمتنا واعتمادها بصرامة لضمان الموثوقية المطلقة أثناء حالات الطوارئ الحرجة
+          المتعلقة بسلامة الأرواح.</p>
       </div>
       <div class="cert-slider rv">
         <div class="cert-track">
@@ -4060,7 +4178,8 @@
       <div class="section-head section-head-centered rv">
         <span class="eyebrow" data-i18n="cta.eyebrow">استشارة مجانية</span>
         <h2 data-i18n="cta.h2">مبانيك تستحق <br><span class="em">سلامة معتمدة.</span></h2>
-        <p data-i18n="cta.lead">تحدث مع فريق المهندسين لدينا حول متطلبات الإعلان العام أو الإخلاء الصوتي أو الكشف عن الحرائق. نحن نقدم الاستشارات ومسوحات المواقع والعروض المخصصة.</p>
+        <p data-i18n="cta.lead">تحدث مع فريق المهندسين لدينا حول متطلبات الإعلان العام أو الإخلاء الصوتي أو الكشف عن
+          الحرائق. نحن نقدم الاستشارات ومسوحات المواقع والعروض المخصصة.</p>
         <div class="cta-actions">
           <a href="#contact" class="btn btn-primary btn-lg">
             <span data-i18n="cta.btn1">احصل على استشارة خبراء</span>
@@ -4078,7 +4197,8 @@
             +971 4 326 2730
           </a>
         </div>
-        <p class="cta-meta" data-i18n="cta.meta">الأحد – الخميس · 8:30 صباحاً – 6:30 مساءً · الوحدة 11، LIU-1، واحة دبي للسيليكون، الإمارات</p>
+        <p class="cta-meta" data-i18n="cta.meta">الأحد – الخميس · 8:30 صباحاً – 6:30 مساءً · الوحدة 11، LIU-1، واحة دبي
+          للسيليكون، الإمارات</p>
       </div>
     </div>
   </section>
@@ -4120,12 +4240,13 @@
               </div>
               <div class="form-field full">
                 <label for="fmsg" data-i18n="form.msg">الرسالة <em>*</em></label>
-                <textarea class="ft" id="fmsg" placeholder="صف مشروعك أو استفسارك&hellip;"
-                  data-i18n-ph="form.msg_ph" required></textarea>
+                <textarea class="ft" id="fmsg" placeholder="صف مشروعك أو استفسارك&hellip;" data-i18n-ph="form.msg_ph"
+                  required></textarea>
               </div>
             </div>
             <div class="form-submit">
-              <p class="form-note" data-i18n="form.note">سيؤدي الإرسال إلى فتح تطبيق البريد الإلكتروني الخاص بك. لا يتم تخزين أي شيء على هذا الموقع.</p>
+              <p class="form-note" data-i18n="form.note">سيؤدي الإرسال إلى فتح تطبيق البريد الإلكتروني الخاص بك. لا يتم
+                تخزين أي شيء على هذا الموقع.</p>
               <button type="submit" class="btn btn-primary">
                 <span data-i18n="form.send">إرسال الرسالة</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -4177,7 +4298,8 @@
                 </svg></div>
               <div>
                 <h6 class="clabel" data-i18n="contact.hq">المقر الرئيسي</h6>
-                <div class="cval" data-i18n="tb_loc">ATEÏS الشرق الأوسط FZCO<br>الوحدة 11، LIU-1، واحة دبي للسيليكون<br>ص.ب 293640، دبي، الإمارات</div>
+                <div class="cval" data-i18n="tb_loc">ATEÏS الشرق الأوسط FZCO<br>الوحدة 11، LIU-1، واحة دبي
+                  للسيليكون<br>ص.ب 293640، دبي، الإمارات</div>
               </div>
             </div>
             <div class="contact-card card">
@@ -4268,7 +4390,8 @@
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              <span data-i18n="ft.address_full">الوحدة 11، LIU-1، واحة دبي للسيليكون،<br>ص.ب 293640، دبي، الإمارات</span>
+              <span data-i18n="ft.address_full">الوحدة 11، LIU-1، واحة دبي للسيليكون،<br>ص.ب 293640، دبي،
+                الإمارات</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
@@ -4341,7 +4464,8 @@
         </svg>
       </button>
     </div>
-    <div class="at-note" data-i18n="chat.note">مساعد ذكي — للتحدث إلى موظف بشري، اضغط على "التحدث إلى إنسان" في أي وقت.</div>
+    <div class="at-note" data-i18n="chat.note">مساعد ذكي — للتحدث إلى موظف بشري، اضغط على "التحدث إلى إنسان" في أي وقت.
+    </div>
   </div>
 
   <script>
