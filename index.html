@@ -2255,6 +2255,10 @@
         background: rgba(255, 255, 255, 0.8);
       }
 
+      .nav-inner {
+        gap: 0rem;
+      }
+
       .nav-links {
         display: none;
       }
@@ -2860,6 +2864,20 @@
       to {
         transform: translateX(50%);
       }
+    }
+
+    html[dir="rtl"] .hero-box {
+      background: none;
+    }
+
+    html[dir="rtl"] .hero-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.8) 100%), url('assets/hero.png') no-repeat center top / cover;
+      transform: scaleX(-1);
+      border-radius: inherit;
+      z-index: 0;
     }
   </style>
 </head>
