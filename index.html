@@ -2879,6 +2879,35 @@
       border-radius: inherit;
       z-index: 0;
     }
+
+    html[dir="rtl"] .proc-line::after {
+      animation: light-move-rtl 6s linear infinite;
+    }
+
+    @keyframes light-move-rtl {
+      0% {
+        right: 0.83%;
+        opacity: 0;
+      }
+
+      2% {
+        opacity: 1;
+      }
+
+      83.33% {
+        right: 84.16%;
+        opacity: 1;
+      }
+
+      88% {
+        opacity: 0;
+      }
+
+      100% {
+        right: 84.16%;
+        opacity: 0;
+      }
+    }
   </style>
 </head>
 
